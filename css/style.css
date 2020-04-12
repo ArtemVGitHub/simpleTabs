@@ -1,0 +1,105 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* General Tabs */
+.wrapper{
+	min-height: 100vh;
+	width: 100%;
+	background: #ecf0f3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container{
+	border-radius: 20px;
+	background: #ecf0f3;	
+	font-family: 'Lato', sans-serif;
+ 	box-shadow: 13px 13px 20px #cbced1,
+              -13px -13px 20px #ffffff;
+	overflow: hidden;
+}
+.tabs-header{
+	display: flex;
+	padding: 30px 50px 0 50px;
+	justify-content: space-between;
+	cursor: pointer;
+	font-weight: bold;
+	color: #999;
+}
+.tabs-header__title{
+	position: relative;
+	transition: all 0.3s ease;
+}
+.tabs-header__title:hover,
+.tabs-header__title.current{
+	color: #333;
+}
+.tabs-header__title::before{
+	content: '';
+	left: 0;
+	background-color: #333;
+	position: absolute;
+	transform: scaleX(0);
+	bottom: -5px;
+	height: 2px;
+	width: 100%;
+	transition: all 0.3s ease;
+}
+.tabs-header__title:hover::before,
+.tabs-header__title.current::before{
+	transform: scaleX(1);
+}
+
+.tabs-content{
+	min-height: 400px;
+	padding: 30px;
+	color: #333;
+}
+.tabs-content__title{
+	margin: 20px 0 15px 0;
+}
+.tabs-content__body{
+	width: 100%;
+	max-width: 600px;
+}
+.tabs-content__text{
+	margin-bottom: 1rem;
+}
+
+/* Animate Styles */
+
+.tabs-content .tabs-content__body.hide {
+	display: none;
+ }
+.tabs-content .tabs-content__body.show {
+	display: block;
+ }
+
+ .fade {
+	-webkit-animation-name: fade;
+			  animation-name: fade;
+	-webkit-animation-duration: 2.5s;
+			  animation-duration: 2.5s;
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 2.5s;
+ }
+ @-webkit-keyframes fade {
+	from {
+	  opacity: 0.1;
+	}
+	to {
+	  opacity: 1;
+	}
+ }
+ @keyframes fade {
+	from {
+	  opacity: 0.1;
+	}
+	to {
+	  opacity: 1;
+	}
+ }
+
